@@ -1,0 +1,19 @@
+{
+	"name": "boilerplate-grunt_pug_postcss_typescript",
+	"description": "Start a new front-end project using GruntJS to perform task automation with a Pug/postcss/TypeScript/uglify/watch basic set-up.",
+	"homepage": "https://github.com/ZorphDark/boilerplate-grunt_pug_postcss_typescript.git",
+	"dependencies": {
+		"grunt": ">=0.4.0",
+		"grunt-banner": "~0.6.0",
+		"grunt-postcss": ">=0.8.0",
+		"postcss-cssnext": "^2.7.0",
+		"postcss-clean": "^1.0.2",
+		"precss": "^1.4.0",
+		"grunt-contrib-concat": "~1.0.0",
+		"grunt-contrib-uglify": ">=2.0.0",
+		"grunt-contrib-pug": ">=1.0.0",
+		"grunt-contrib-watch": ">=1.0.0",
+		"ntypescript": "^1.201609060105.1",
+		"time-grunt": "~1.3.0",
+	}
+}

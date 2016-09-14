@@ -138,6 +138,7 @@ module.exports = function(grunt) {
 	require('time-grunt')(grunt);
 
   grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('ntypescript');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-banner');

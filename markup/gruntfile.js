@@ -43,14 +43,13 @@ module.exports = function(grunt) {
       }
     },
 
-    ntypescript: {
+    ts: {
       options: {
-        project: '.'
+        sourceMap: false,
       },
       dist: {
-        files: {
-          '<%= path.js.source %>scripts.js': '<%= path.js.source %>core.ts'
-        }
+        src: '<%= path.js.source %>**/*.ts',
+        out: '<%= path.js.source %>scripts.js'
       }
     },
 
@@ -138,7 +137,7 @@ module.exports = function(grunt) {
 	require('time-grunt')(grunt);
 
   grunt.loadNpmTasks('grunt-postcss');
-  grunt.loadNpmTasks('ntypescript');
+  grunt.loadNpmTasks('grunt-ts');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-banner');
@@ -147,6 +146,6 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('html', ['pug']);
 	grunt.registerTask('css', ['postcss', 'concat:css', 'usebanner:css']);
-  grunt.registerTask('js', ['ntypescript', 'uglify', 'concat:js', 'usebanner:js']);
+  grunt.registerTask('js', ['ts', 'uglify', 'concat:js', 'usebanner:js']);
 	grunt.registerTask('default', ['html', 'css', 'js']);
 };
